@@ -18,7 +18,7 @@
 </head>
 <body class="bg-gray-200 select-none">
   
-    <div class="menu flex justify-between items-center bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 p-2 ">
+    <div class="menu flex justify-between items-center bg-gradient-to-r from-gray-600 via-gray-400 to-gray-400 p-2 ">
         <div  id="hamburger">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gray-700 p-1 rounded-md text-white cursor-pointer ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -98,7 +98,7 @@
     
 </div>
    <div class="bg-white mt-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white p-5 ">
-    <h1 class="mb-3 text-lg ">Mma Bank</h1>
+    <h1 class="mb-3 text-lg font-bold text-gray-400">Mma Bank</h1>
     <div class="flex justify-between mx-5">
     <div>
     <h1 class="text-center text-xl font-bold">Services</h1>
@@ -114,12 +114,22 @@
         <p class="text-center mt-1">7619562002</p>
         <span>My Git Hub : </span>
         <a href="https://github.com/MubbashirAhmed123" target="_blank">https://github.com/MubbashirAhmed123</a>
+        <br>
+        <span>Source code : </span>
+        <a href="https://github.com/MubbashirAhmed123/banking-system-" target="_blank">Get here</a>
         <div class="flex justify-center space-x-5 mt-3 items-center">
+
        <img src="https://i.pinimg.com/originals/08/17/15/0817158f3a05c0d62de647c28f4cde54.jpg" alt="" class="h-8 ">
+
        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfhj_o2d_86DhA-g1KdlsxFQQKNFimREJrkg&usqp=CAU" alt="" class="h-8">
-       <img src="https://thumbs.dreamstime.com/z/high-resolution-image-black-white-whatsapp-icon-web-printing-purpose-logo-background-172342092.jpg" alt="" class="h-8">
-       <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="" class="h-10">
-       </div>
+       <a href="https://wa.me/7619562002?text= Hello ! Mma Bank I'd like to chat " target="_blank">
+        <img src="https://thumbs.dreamstime.com/z/high-resolution-image-black-white-whatsapp-icon-web-printing-purpose-logo-background-172342092.jpg" alt="" class="h-8">
+        </a>
+  
+        <a href="https://github.com/MubbashirAhmed123" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="" class="h-10"  >
+       </a>
+    </div>
 
     </div>
     <div>
