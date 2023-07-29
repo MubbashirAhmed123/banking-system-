@@ -138,7 +138,7 @@
     </div>
 
     </div>
-<footer class="text-center text-lg mt-5 p-1">&copy; Copy Rights Of<span class="font-bold font-mono"> Mubbashir</span> 2023, All Rights Reserved</footer>
+<footer class="text-center text-lg mt-5 p-1">&copy; Copy Rights Of<span class="font-bold font-mono"> Mma Bank</span> 2023, All Rights Reserved</footer>
 <div>
 
 </div>
