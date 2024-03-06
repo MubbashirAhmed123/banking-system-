@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://img.icons8.com/fluency/2x/home-page.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-
+<link rel="stylesheet" href="./output.css">
     <title>Mma Bank</title>
     <style>
         .activeMenu.navbar{
@@ -29,9 +28,9 @@
             <h1 class=" text-slate-700 text-xl font-bold ">MMA BANK</h1>
         </div>
         <div class="space-x-5">
-            <a class="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 text-grenn-700 p-1 rounded-md text-center border-2 border-gray-700 hover:text-gray-600  " href="./login.php" target="_blank">Login</a>
+            <a class=" text-gray-900 font-bold p-1 rounded-md text-center border-2 border-gray-700 hover:text-gray-600  " href="./login.php" target="_blank">Login</a>
              
-            <a class="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 text-grenn-700 p-1 rounded-md text-center border-2 border-gray-700 hover:text-gray-600 " href="./createAcc.php" target="_blank">Create Account</a>
+            <a class="text-gray-900 font-bold p-1 rounded-md text-center border-2 border-gray-700 hover:text-gray-600 " href="./createAcc.php" target="_blank">Create Account</a>
         </div>
 
     </div>
@@ -50,7 +49,7 @@
             <h1 class="text-black to-yellow-500 text-2xl font-bold mb-3">Mobile Banking</h1>
             Mobile banking is the act of making financial transactions on a mobile device (cell phone, tablet, etc.). This activity can be as simple as a bank sending fraud or usage activity to a client’s cell phone or as complex as a client paying bills or sending money abroad. Advantages to mobile banking include the ability to bank anywhere and at any time. Disadvantages include security concerns and a limited range of capabilities when compared to banking in person or on a computer.
         </div>
-        <div class="rounded-md shadow-lg shadow-gray-800 rounded-lg">
+        <div class="shadow-lg shadow-gray-800 rounded-lg">
            <img width="450px" src="images/banking.jpg" alt=""  >
        </div>
    </div>
@@ -132,10 +131,7 @@
     </div>
 
     </div>
-    <div>
-        <h1 class="text-center text-xl font-bold">Address</h1>
-        <p>Rehmat Nagar Gulbarga 585102</p>
-    </div>
+  
 
     </div>
 <footer class="text-center text-lg mt-5 p-1">&copy; Copy Rights Of<span class="font-bold font-mono"> Mma Bank</span> 2023, All Rights Reserved</footer>

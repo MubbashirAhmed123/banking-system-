@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Transfer amount</title>
 </head>
 <body>
@@ -13,26 +12,33 @@
 
 <?php
 $accnum=$_POST['accnum'];
-$amount=$_POST['amount'];
+$enteredamount=$_POST['amount'];
 $bankpin=$_POST['bankpin'];
 
-$conn=mysqli_connect("localhost","root","","bankinfo");
+include 'db.php';
 
 $sql="SELECT * FROM userinfo WHERE Account_number={$accnum}";
 
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
 
-    $conn1=mysqli_connect("localhost","root","","bankinfo");
     $sql1="SELECT * FROM userinfo WHERE Banking_pin={$bankpin};";
     // $sql1.="UPDATE userinfo SET Amount=Amount-{$amount}";
-    $result1=mysqli_query($conn1,$sql1);
+    $result1=mysqli_query($conn,$sql1);
     if(mysqli_num_rows($result1)>0){
+    while($row2=mysqli_fetch_assoc($result1)){
+        $amount=$row2['Amount'];
+        if($enteredamount>$amount){
+            echo 'insufficient balence';
+            return;
+        }else{
+            $sql2="UPDATE userinfo SET Amount=Amount-{$enteredamount} WHERE Banking_pin={$bankpin};";
 
-    $conn2=mysqli_connect("localhost","root","","bankinfo");
-    $sql2="UPDATE userinfo SET Amount=Amount-{$amount} WHERE Banking_pin={$bankpin};";
-    $sql2.="UPDATE userinfo SET Amount=Amount+{$amount} WHERE Account_number={$accnum}";
-    $result2=mysqli_multi_query($conn2,$sql2);
+            $sql2.="UPDATE userinfo SET Amount=Amount+{$enteredamount} WHERE Account_number={$accnum}";
+            $result2=mysqli_multi_query($conn,$sql2);
+        }
+    }
+   
 
  
  while ($row=mysqli_fetch_assoc($result)) {

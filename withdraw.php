@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Withdraw</title>
 </head>
 <body>
    
 
 <?php
+include 'db.php';
+
 $pin=$_POST['pin'];
 $accounttype=$_POST['acctype'];
-$amount=$_POST['amount'];
+$enteredamount=$_POST['amount'];
 $accountnum=$_POST['accnum'];
-$conn=mysqli_connect("localhost","root","","bankinfo");
 $sql="SELECT * FROM userinfo WHERE Banking_pin={$pin} AND Account_number={$accountnum} AND Account_type='{$accounttype}'";
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
-$conn1=mysqli_connect("localhost","root","","bankinfo");
 
-$sql1="UPDATE userinfo SET Amount=Amount-{$amount} WHERE Banking_pin={$pin} AND Account_number={$accountnum} AND Account_type='{$accounttype}'";
+while($row=mysqli_fetch_assoc($result)){
+    $amount=$row['Amount'];
+    if($enteredamount>$amount){
+        echo 'insufficeint balance';
+        return;
+    }else{
+        $sql1="UPDATE userinfo SET Amount=Amount-{$enteredamount} WHERE Banking_pin={$pin} AND Account_number={$accountnum} AND Account_type='{$accounttype}'";
+        $result1=mysqli_query($conn,$sql1);
 
-$result1=mysqli_query($conn1,$sql1);
+    }
+}
+
+
 
 // if(mysqli_num_rows($result1)>0){
 

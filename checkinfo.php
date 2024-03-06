@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","bankinfo");
+include 'db.php';
 $ph=$_POST['phone'];
 $bpin=$_POST['bankingpin'];
 

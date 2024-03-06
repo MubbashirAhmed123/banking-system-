@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>Deposit amount</title>
 </head>
 <body class="bg-gray-200">
@@ -17,15 +16,15 @@
   $amt=$_POST['amt'];
   $bankingpin=$_POST['bankingpin'];
 
-$conn=mysqli_connect("localhost","root","","bankinfo");
+include 'db.php';
+
 
 $sql="SELECT * FROM userinfo WHERE Phone_number={$p} AND Banking_pin={$bankingpin}";
 
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
-$conn1=mysqli_connect("localhost","root","","bankinfo");
 $sql1="UPDATE userinfo SET Amount=Amount+{$amt} WHERE Phone_number={$p} AND Banking_pin={$bankingpin}";
-$result1=mysqli_query($conn1,$sql1);
+$result1=mysqli_query($conn,$sql1);
 echo '<div class="flex justify-center items-center h-screen">
 <div class="bg-green-400 text-green-800 p-1 text-center w-[30%] h-[30%] rounded-md shadow-lg shadow-gray-700/50">
 <img src="images/img3.jpg" class="w-16 h-16 m-auto mt-3">';

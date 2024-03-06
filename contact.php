@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj2X-qQy-yqdbIY0iFLcOuNj0Zl4HgGUQc7Q&usqp=CAU" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
     <title>Contact</title>
 </head>
 <body class="bg-gray-200">
@@ -91,7 +90,7 @@
         active:bg-blue-800 active:shadow-lg
         transition
         duration-150
-        ease-in-out" value="Send">
+        ease-in-out cursor-pointer" value="Send">
     </form>
   </div>
 </section>

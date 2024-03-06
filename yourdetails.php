@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Your Details</title>
 </head>
 <body>
     
 <?php
+include 'db.php';
+
 $acc= $_POST['accnum'];
-$conn=mysqli_connect("localhost","root","","bankinfo");
 $sql="SELECT * FROM userinfo Where Account_number=$acc";
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
@@ -66,10 +66,7 @@ while($row=mysqli_fetch_assoc($result)){
                   <th class="border-r border-gray-900 p-3 ">Account Type</th>
                   <td class="text-center"><?php echo  $row['Account_type']; ?> </td>
               </tr>
-              <tr class="border-[1px] border-gray-900">
-                  <th class="border-r border-gray-900 p-3 ">Aadhaar Number : </th>
-                  <td class="text-center"><?php echo  $row['Aadhar_number']; ?> </td>
-              </tr>
+              
               <tr class="border-[1px] border-gray-900 ">
                   <th class="border-r border-gray-900 p-3 ">Mobile Number : </th>
                   <td class="text-center"><?php echo  $row['Phone_number']; ?> </td>

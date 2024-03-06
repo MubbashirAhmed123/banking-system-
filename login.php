@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/295/295128.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Login</title>
 </head>
 <body class="bg-gray-100">
@@ -22,10 +21,10 @@
     <img src="images/login.png" alt="" class="w-10 mx-auto mb-3">
     
         <div class="p-2 mb-3 text-center">
-        <input type="text" name="phone"  class="bg-gray-200 w-[250px] p-1 rounded-md focus:outline-none" placeholder="Ph number" required>
+        <input type="number" name="phone"  class="bg-gray-200 w-[250px] p-1 rounded-md focus:outline-none" placeholder="Ph number" required>
         </div>
         <div class="p-2 mb-3 text-center">
-        <input type="text" name="bankingpin"  class="bg-gray-200 w-[250px] p-1 rounded-md focus:outline-none" placeholder="Banking pin" required>
+        <input type="number" name="bankingpin"  class="bg-gray-200 w-[250px] p-1 rounded-md focus:outline-none" placeholder="Banking pin" required>
         </div>
         <div class="mt-5 text-center">
             <button id="btn" type="submit" class="border-2 border-gray-300 bg=trasnparent text-gray-600 rounded-md w-[250px] hover:text-gray-700 hover:bg-gray-100 transition-all delay-100 active:bg-gray-300">Login</button>

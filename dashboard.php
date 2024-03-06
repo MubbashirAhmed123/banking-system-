@@ -10,7 +10,6 @@ if(!isset($_POST['phone'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Dashboard</title>
 </head>
 <body class="bg-gray-200">
@@ -18,7 +17,7 @@ if(!isset($_POST['phone'])){
 <p id="msg" class="bg-green-500 text-green-900 text-center p-2 ">Your Account Created SuccessFully !</p>
 </div>   
 <div class="">
-<p class=" text-gray-900 text-gray-800 text-lg ">Welcome : <?php
+<p class=" text-gray-900 text-lg ">Welcome : <?php
 session_start();
 $_SESSION['phone']=$_POST['phone'];
 // echo 'session created'.$_POST['phone'];
@@ -60,10 +59,7 @@ $_SESSION['phone']=$_POST['phone'];
                 <th class="border-r border-gray-900 p-3 ">Account Type</th>
                 <td class="text-center"><?php echo $_POST['radiobtn']; ?> </td>
             </tr>
-            <tr class="border-[1px] border-gray-900">
-                <th class="border-r border-gray-900 p-3 ">Aadhaar Number : </th>
-                <td class="text-center"><?php echo $_POST['aadhaarnum']; ?> </td>
-            </tr>
+            
             <tr class="border-[1px] border-gray-900 ">
                 <th class="border-r border-gray-900 p-3 ">Mobile Number : </th>
                 <td class="text-center"><?php echo $_POST['phone']; ?> </td>
@@ -86,19 +82,19 @@ $_SESSION['phone']=$_POST['phone'];
 
 
 <?php
+include 'db.php';
 $fname=$_POST['fname'];
 $mname=$_POST['mname'];
 $lname=$_POST['lname'];
 $accnumber=$accnum;
 $bankpin=$pin;
-$aadharnumber=$_POST['aadhaarnum'];
 $phonenumber=$_POST['phone'];
 $acctype=$_POST['radiobtn'];
 
-$conn = mysqli_connect("localhost","root","","bankinfo");
-$sql="INSERT INTO userinfo(Account_number,Banking_pin,First_name,Middle_name,Last_name,Aadhar_number,Phone_number,Account_type) VALUES
+// $conn = mysqli_connect("localhost","root","","bankinfo");
+$sql="INSERT INTO userinfo(Account_number,Banking_pin,First_name,Middle_name,Last_name,Phone_number,Account_type) VALUES
 (
-    {$accnumber},{$bankpin},'{$fname}','{$mname}','{$lname}',{$aadharnumber},{$phonenumber},'{$acctype}'
+    {$accnumber},{$bankpin},'{$fname}','{$mname}','{$lname}',{$phonenumber},'{$acctype}'
 )";
 $result=mysqli_query($conn,$sql);
 ?>

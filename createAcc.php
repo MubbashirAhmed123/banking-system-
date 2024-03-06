@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Create Account</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 p-5">
 
     <h1 class="text-center text-xl">Bank Of Mma </h1>
     <p class="mt-5 bg-green-400 text-green-700 text-lg mb-3">Create Your Account</p>
@@ -21,63 +21,71 @@
         <li>All Fields In Block Letter</li>
     </ul>
     <hr>
-    <form action="dashboard.php" method="POST" class="h-screen grid grid-cols-3 place-items-center " name="form">
+    <form action="dashboard.php" method="POST" class="mx-auto w-[500px] flex flex-col justify-center p-2 " name="form">
         <div>
         <label for="fname" class="text-gray-700 font-bold text-lg">First Name : </label>
-        <input type="text" name="fname" id="fname" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600" required>
+        <br>
+        <input type="text" name="fname" id="fname" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1 " required>
         </div>
         
         <div>
         <label for="mname" class="text-gray-700 font-bold text-lg">Middle Name : </label>
-        <input type="text" name="mname" id="mname" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 "required>
+        <br>
+        <input type="text" name="mname" id="mname" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1 "required>
     </div>
     <div class="">
         <label for="lname" class="text-gray-700 font-bold text-lg">Last/Sir Name : </label>
-        <input type="text" name="lname" id="lname"class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 "required>
+        <br>
+        <input type="text" name="lname" id="lname"class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1 "required>
     </div>
     
-    <div>
-        <label for="aadhaarnum" class="text-gray-700 font-bold text-lg">Aadhaar Number : </label>
-        <input type="number" name="aadhaarnum" id="aadhaarnum" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600" placeholder="ex:-1234-4567-8910"required>
-    </div>
+   
     
     
     <div>
         <label for="phone" class="text-gray-700 font-bold text-lg">Phone Number : </label>
-        <input type="number" name="phone" id="phone" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600" placeholder="10 digit mobile number"required>
+        <br>
+        <input type="number" name="phone" id="phone" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1" placeholder="10 digit mobile number"required>
     </div>
     <div>
         <label for="email" class="text-gray-700 font-bold text-lg">Email Address : </label>
-        <input type="email" name="email" id="email" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600" placeholder="xyz@example.com"required>
+        <br>
+        <input type="email" name="email" id="email" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1" placeholder="xyz@example.com"required>
     </div>
     <div class="">
         <label for="address" class="text-gray-700 font-bold text-lg">Home/Offfice Address : </label>
-        <input type="text" name="address" id="address" class=" border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center w-full overflow-auto focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
+        <br>
+        <input type="text" name="address" id="address" class="p-1 border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center w-full overflow-auto focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
     </div>
     <div>
         <label for="country" class="text-gray-700 font-bold text-lg">Country:</label>
-        <input type="text" name="country" id="country" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600" value="India" disabled>
+        <br>
+        <input type="text" name="country" id="country" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1" value="India" disabled>
     </div>
     <div>
     <label for="state" class="text-gray-700 font-bold text-lg">Enter State : </label>
-    <input type="text" name="state" id="state" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
+    <br>
+    <input type="text" name="state" id="state" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1"required>
     </div>
     <div>
         <label for="city" class="text-gray-700 font-bold text-lg">Enter City : </label>
-        <input type="text" name="city" id="city" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
+        <br>
+        <input type="text" name="city" id="city" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1"required>
     </div>
     <div>
         <label for="zipcode" class="text-gray-700 font-bold text-lg">Zip Code : </label>
-        <input type="number" name="zipcode" id="zipcode" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600"required >
-    </div>
-    <div>
-        <label for="" class="text-gray-700 font-bold text-lg">Account Type :</label> 
         <br>
+        <input type="number" name="zipcode" id="zipcode" class="border-2 border-blue-700 rounded-md bg-gray-200  focus:outline-none text-center focus:text-gray-700 focus:bg-white focus:border-blue-600 w-[300px] p-1"required >
+    </div>
+    <div class="">
+        <label for="" class="text-gray-700 font-bold text-lg">Account Type :</label> 
+        
         <label for="curracc" class="text-gray-700 font-bold text-lg">Current:</label>
-        <input type="radio" name="radiobtn" id="curracc" value="Current" class="w-6 focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
+        <input type="radio" name="radiobtn" id="curracc" value="Current" class=" focus:text-gray-700 focus:bg-white focus:border-blue-600"required>
     
         <label for="savacc" class="text-gray-700 font-bold text-lg">Saving:</label>
-        <input type="radio" name="radiobtn" id="savacc" value="Saving" required >
+    
+        <input type="radio" name="radiobtn" id="savacc" value="Saving" class='' required >
     </div>
     <br>
     

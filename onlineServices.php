@@ -20,7 +20,6 @@ if(!isset($_POST['phone']))
     header("location:/banking/login.php");
 
 }
-$accnum;
 ?>
 
 <body class="bg-slate-100">
@@ -28,9 +27,9 @@ $accnum;
    <?php
  
 
-$conn1=mysqli_connect("localhost","root","","bankinfo");
+include 'db.php';
 $sql1="SELECT * FROM userinfo WHERE Banking_pin='{$_POST['bankingpin']}'";
-$result1=mysqli_query($conn1,$sql1);
+$result1=mysqli_query($conn,$sql1);
 if(mysqli_num_rows($result1)>0){
 
 ?>
@@ -39,8 +38,9 @@ if(mysqli_num_rows($result1)>0){
     <?php
 while($row1=mysqli_fetch_assoc($result1)){
     $accnum=$row1['Account_number'];
+    $name=$row1['First_name'];
 ?>
-<h1 class="bg-slate-100 text-blue-600 text-lg font -bold underline">Hello <?php echo $accnum; ?> !</h1>
+<h1 class="bg-slate-100 text-blue-600 text-lg font -bold underline">Hello <?php echo $name; ?> !</h1>
 <a href="logout.php">Log out</a>
         
 <?php }
@@ -75,10 +75,7 @@ while($row1=mysqli_fetch_assoc($result1)){
      <h2 class="text-lg font-bold text-blue-700">Withdraw amount</h2>
         <p>Withdraw amount from your bank account </p>
      </div>
-     <div class="fifth mt-16 cursor-pointer">
-     <h2 class="text-lg font-bold text-blue-700">Tablet banking</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, sapiente!</p>
-     </div>
+     
      <div class="sixth mt-16 cursor-pointer">
         <form action="yourdetails.php" method="post" target="_blank">
         <div>
@@ -96,9 +93,9 @@ while($row1=mysqli_fetch_assoc($result1)){
 
     <div id="online_banking" class="fixed bg-gray-700 p-5 rounded-md hidden">
         <p class="mb-3 text-white font-bold text-lg">Transfer money to another account</p>
-        <form action="viewdetails.php" class="bg-white text-black rounded-md p-2 text-center" method='POST' target="_blank">
+        <form action="transferAmount.php" class="bg-white text-black rounded-md p-2 text-center" method='POST' target="_blank">
             <div>
-                <input type="number" name="accnum" id="accnum" placeholder="Enter account number" class="bg-gray-100 rounded-md p-1 " required>
+                <input type="number" name="accnum" id="accnum" placeholder="Enter other's Ac/No" class="bg-gray-100 rounded-md p-1 " required>
             </div>
             <div>
                 <input type="number" name="amount" id="amount"placeholder="Enter amount" class="mt-3 bg-gray-100 rounded-md p-1 "required >
@@ -150,7 +147,7 @@ while($row1=mysqli_fetch_assoc($result1)){
         <div id="seebalance" class="fixed bg-gray-700 p-5 rounded-md hidden ">
         <p class="mb-3 text-white font-bold text-lg text-center">See your balance</p>
             <form action='seebalance.php
-            ' method="post" class="bg-white text-black rounded-md p-2 text-center p-5 mt-5" target="_blank">
+            ' method="post" class="bg-white text-black rounded-md  text-center p-5 mt-5" target="_blank">
             <div>
             <input type="number" name="bankingpin" id="" class="mt-3 bg-gray-100 rounded-md p-1 border-2 border-black mb-3" placeholder="Enter pin">
             </div>
